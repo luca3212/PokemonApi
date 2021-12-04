@@ -7,15 +7,24 @@
 }
 body{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
     background-image: url(fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.conteGral{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container{
     border-radius: 8px;
     display: flex;
@@ -140,40 +149,6 @@ body{
     }
 }
 
-
-@media screen and(max-width:560px){
-    .container{
-        padding: 16px 8px;
-        width: 96%;
-        min-width: 0;
-        
-        height: max-content;
-        max-height: none;
-        min-height: none;
-    }
-    body{
-        //min-height: 100vh;
-        min-height: 100%;
-    }
-
-
-}
-
-@media screen and(max-width:440px){
-    
-    .data{
-   
-        label{
-            font-size: 12px;
-            text-align: center;
-            padding: 4px;  
-           
-        }
-       
-    }
-}
-
-
 //punta
 .arrow{
     min-width: 50px;
@@ -197,12 +172,6 @@ body{
     border-right: 8px solid #eee;
     border-top: 8px solid #eee;
     transform: rotate(45deg);
-    transition: 0.5s;
-
-    &:hover{
-        width: 65px;
-        height: 65px;        
-    }
 }
 
 .left{
@@ -254,3 +223,38 @@ body{
     100%{ transform: rotate(360deg) ; }
 }
 
+
+@media screen and(max-width:560px){
+    .container{
+        padding: 16px 8px;
+        width: 96%;
+        min-width: 0;
+        
+        // height: max-content;
+        // max-height: none;
+        // min-height: none;
+        margin-top: 20px;
+    }
+}
+
+@media screen and(max-width:440px){
+    
+    .data{
+   
+        label{
+            font-size: 12px;
+            text-align: center;
+            padding: 4px;  
+           
+        }
+       
+    }
+    .line{
+        
+        width: 30px;
+        height: 30px;
+        border-right: 6px solid #eee;
+        border-top: 6px solid #eee;
+       
+    }
+}

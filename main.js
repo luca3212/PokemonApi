@@ -24,7 +24,6 @@ const siguiente = document.getElementById('next');
 anterior.addEventListener('click', ()=>{
     if(idActual==1){
         anterior.classList.toggle('disableArrow');
-        console.log("no hay mas");
     }else{
         if(idActual==10001){
             idActual=898;
@@ -39,7 +38,6 @@ anterior.addEventListener('click', ()=>{
 siguiente.addEventListener('click', ()=>{
     if(idActual==10220){
         siguiente.classList.toggle('disableArrow');
-        console.log("no hay mas");
     }else{
         if(idActual==898){
             idActual=10001;
@@ -58,8 +56,7 @@ async function dataPokemon(varURL){
     try {
         const dataAPI = await fetch(varURL);
         const jsonData = await dataAPI.json();
-        console.log(jsonData);
-
+       
         idActual= jsonData.id;
         
         if(idActual==1){

@@ -8,23 +8,24 @@
 
 body {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-image: url(fondo.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.conteGral {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container {
@@ -193,30 +194,6 @@ body {
   color: #f7f7f7;
 }
 
-@media screen and (max-width: 560px) {
-  .container {
-    padding: 16px 8px;
-    width: 96%;
-    min-width: 0;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    max-height: none;
-    min-height: none;
-  }
-  body {
-    min-height: 100%;
-  }
-}
-
-@media screen and (max-width: 440px) {
-  .data label {
-    font-size: 12px;
-    text-align: center;
-    padding: 4px;
-  }
-}
-
 .arrow {
   min-width: 50px;
   width: 20%;
@@ -248,13 +225,6 @@ body {
   border-top: 8px solid #eee;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.line:hover {
-  width: 65px;
-  height: 65px;
 }
 
 .left {
@@ -336,6 +306,29 @@ body {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .container {
+    padding: 16px 8px;
+    width: 96%;
+    min-width: 0;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .data label {
+    font-size: 12px;
+    text-align: center;
+    padding: 4px;
+  }
+  .line {
+    width: 30px;
+    height: 30px;
+    border-right: 6px solid #eee;
+    border-top: 6px solid #eee;
   }
 }
 /*# sourceMappingURL=style.css.map */
