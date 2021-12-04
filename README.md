@@ -2,6 +2,7 @@
 
 Busqueda de Pokemon por API
 
-DEMO
+<a href="https://luca3212.github.io/PokemonApi/" target="_blank" >DEMO</a>
 
-Ejercicio para CourseIT
+
+Ejercicio para <a href="https://courseit.io/" target="_blank">CourseIT</a>
