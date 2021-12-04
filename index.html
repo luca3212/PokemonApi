@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    
+</head>
+<body>
+    <main class="container">
+        <div class="form">
+            <input class="boxText" type="text" placeholder="Buscar Pokemon..." id="entrada">
+            <button class="btonForm" type="button" id="buscar" onclick="dataPokemon()">Buscar</button>
+        </div>
+       
+        <div id="cardPokemon" class="card">
+            <div class="imgName">
+                <img id="imgPokemon" src="" alt="">
+                <h2 id="titlePokemon"></h2>
+            </div>
+
+            <span class="separador"></span>
+            
+            <div class="infoPokemon">                                                           
+                <div class="data">
+                    <label for="">Peso</label>
+                    <p id="peso">-</p>
+                </div>
+                <div class="data">
+                    <label for="">Altura</label>
+                    <p id="altura">-</p>
+                </div>
+                <div class="data">
+                    <label for="">HP</label>
+                    <p id="hp">-</p>
+                </div>
+                <div class="data">
+                    <label for="">Ataque</label>
+                    <p id="ataque">-</p>
+                </div>
+                <div class="data">
+                    <label for="">Defensa</label>
+                    <p id="defensa">-</p>
+                </div>
+                <div class="data">
+                    <label for="">Ataque Esp.</label>
+                    <p id="especialAtaque">-</p>
+                </div>
+                <div class="data">
+                    <label for="">Defensa Esp.</label>
+                    <p id="especialDefensa">-</p>
+                </div>
+                <div class="data">
+                    <label for="">Velocidad</label>
+                    <p id="velocidad">-</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

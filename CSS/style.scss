@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+   
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 500px;
+    min-height: max-content;
+    max-height: 100vh;
+    
+    //background-color: rgba(184, 184, 184, 0.5);
+    background-color: rgba(112, 112, 112, 0.5);
+    backdrop-filter: blur(10px);
+
+    padding: 16px;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    input{
+        border: none;
+        outline: none;
+    }
+}
+
+
+.boxText{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+}
+.btonForm{
+    right: 0;
+    position: absolute;
+    border-radius: 8px;
+    border: none;
+    padding: 16px;
+    width: max-content;
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    color: #f7f7f7;
+}
+
+
+
+
+.card{
+    width: 100%;
+    min-height: 400px;
+    margin-top: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+
+.imgName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 300px;
+    width: 100%;
+    img{
+        width: 55%;
+        height: auto;
+    }
+    h2{
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+}
+
+.separador{
+    margin: 10px 0;
+    width: 95%;
+    height: 1px;
+    background-color: #607d8b;
+}
+
+
+.infoPokemon{
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 10px 0px; 
+}
+
+.data{
+   
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    label{
+        font-size: 14px;
+        font-weight: bold;
+        padding: 4px;  
+        color: #f7f7f7; 
+    }
+    p{
+       font-style: italic;
+        padding: 4px;
+        color: #f7f7f7;
+    }
+}
+
+
+@media screen and(max-width:560px){
+    .container{
+        padding: 16px 8px;
+        width: 96%;
+        min-width: 0;
+        
+        height: max-content;
+        max-height: none;
+        min-height: none;
+    }
+    body{
+        //min-height: 100vh;
+        min-height: 100%;
+    }
+
+
+}
+
+@media screen and(max-width:440px){
+    
+    .data{
+   
+        label{
+            font-size: 12px;
+            text-align: center;
+            padding: 4px;  
+           
+        }
+       
+    }
+}
