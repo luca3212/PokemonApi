@@ -27,7 +27,7 @@ body{
     max-height: 100vh;
     
     //background-color: rgba(184, 184, 184, 0.5);
-    background-color: rgba(112, 112, 112, 0.5);
+    background-color: rgba(58, 58, 58, 0.5);
     backdrop-filter: blur(10px);
 
     padding: 16px;
@@ -81,6 +81,7 @@ body{
 }
 
 .imgName{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -171,3 +172,85 @@ body{
        
     }
 }
+
+
+//punta
+.arrow{
+    min-width: 50px;
+    width: 20%;
+    height: 100%;
+    right: 0;
+    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line{
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-right: 8px solid #eee;
+    border-top: 8px solid #eee;
+    transform: rotate(45deg);
+    transition: 0.5s;
+
+    &:hover{
+        width: 65px;
+        height: 65px;        
+    }
+}
+
+.left{
+    right: none;
+    left: 0;
+    .line{
+        transform: rotate(-135deg);
+    }
+}
+
+.disableArrow{
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+//modal
+.modal{
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 2, 0.8);
+    display: none;
+    .contModal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.open{
+    display: block;
+}
+
+.spinner{
+    width: 50px;
+    height: 50px;
+    border: solid 6px #f7f7f7;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    0%{ transform: rotate(0deg) ; }
+    50%{ transform: rotate(180deg) ; }
+    100%{ transform: rotate(360deg) ; }
+}
+

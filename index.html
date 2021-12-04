@@ -13,13 +13,21 @@
     <main class="container">
         <div class="form">
             <input class="boxText" type="text" placeholder="Buscar Pokemon..." id="entrada">
-            <button class="btonForm" type="button" id="buscar" onclick="dataPokemon()">Buscar</button>
+            <button class="btonForm" type="button" id="buscar" onclick="validation()">Buscar</button>
         </div>
        
         <div id="cardPokemon" class="card">
             <div class="imgName">
                 <img id="imgPokemon" src="" alt="">
                 <h2 id="titlePokemon"></h2>
+
+                <div class="arrow left">
+                    <span class="line" id="prew"></span>
+                </div>
+
+                <div class="arrow">
+                    <span class="line" id="next"></span>
+                </div>
             </div>
 
             <span class="separador"></span>
@@ -61,6 +69,15 @@
             
         </div>
     </main>
+
+
+    <div class="modal" id="loading">
+        <div class="contModal">
+            <div class="spinner">
+            </div>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
