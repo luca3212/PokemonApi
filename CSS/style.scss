@@ -233,7 +233,7 @@ body{
         // height: max-content;
         // max-height: none;
         // min-height: none;
-        margin-top: 20px;
+        //margin-top: 20px;
     }
 }
 
@@ -257,4 +257,15 @@ body{
         border-top: 6px solid #eee;
        
     }
+}
+
+@media screen and(max-height:550px){
+    body{
+        height: max-content;
+        min-height: 550px;
+    }
+    .container{
+        max-height: none;
+    }
+    
 }

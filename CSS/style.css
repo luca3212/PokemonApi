@@ -314,7 +314,6 @@ body {
     padding: 16px 8px;
     width: 96%;
     min-width: 0;
-    margin-top: 20px;
   }
 }
 
@@ -329,6 +328,18 @@ body {
     height: 30px;
     border-right: 6px solid #eee;
     border-top: 6px solid #eee;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  body {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    min-height: 550px;
+  }
+  .container {
+    max-height: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
