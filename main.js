@@ -31,6 +31,7 @@ anterior.addEventListener('click', ()=>{
             idActual--;
         }
         let nextPokemon = `https://pokeapi.co/api/v2/pokemon/${idActual}`;
+        carga.classList.add('open');
         dataPokemon(nextPokemon);
     }
 });
@@ -45,6 +46,7 @@ siguiente.addEventListener('click', ()=>{
             idActual++;
         }
         let nextPokemon = `https://pokeapi.co/api/v2/pokemon/${idActual}`;
+        carga.classList.add('open');
         dataPokemon(nextPokemon);
     }
 });
@@ -52,7 +54,7 @@ siguiente.addEventListener('click', ()=>{
 const carga= document.getElementById('loading');
 
 async function dataPokemon(varURL){
-    carga.classList.add('open');
+    //carga.classList.add('open');
     try {
         const dataAPI = await fetch(varURL);
         const jsonData = await dataAPI.json();
@@ -73,9 +75,9 @@ async function dataPokemon(varURL){
 
         document.getElementById('titlePokemon').innerText= jsonData.name;
         if(jsonData.sprites.other.dream_world.front_default != null){
-            document.getElementById('imgPokemon').src = jsonData.sprites.other.dream_world.front_default;
+            document.getElementById('imgPokemon').src = await jsonData.sprites.other.dream_world.front_default;
         }else{
-            document.getElementById('imgPokemon').src = jsonData.sprites.other.home.front_default;
+            document.getElementById('imgPokemon').src = await jsonData.sprites.other.home.front_default;
         }
                 
         peso.innerText = Number(jsonData.weight) / 10 +" Kg.";
@@ -88,7 +90,8 @@ async function dataPokemon(varURL){
         velocidad.innerText = jsonData.stats[5].base_stat;
                 
         namePokemon.value="";
-        carga.classList.remove('open');        
+        //carga.classList.remove('open');
+               
     } catch (error) {
         document.getElementById('titlePokemon').innerText= "Pokemon no encontrado!";
         document.getElementById('imgPokemon').src = "";
@@ -102,6 +105,9 @@ async function dataPokemon(varURL){
         velocidad.innerText = "-";
         namePokemon.value="";
         namePokemon.focus();
+
+        siguiente.classList.toggle('disableArrow');
+        anterior.classList.toggle('disableArrow');
         carga.classList.remove('open');
     }
       
@@ -113,11 +119,13 @@ function validation(){
         alert("Ingrese el nombre de un Pokemon");
         namePokemon.focus();
     }else{
+        carga.classList.add('open');
         dataPokemon(`https://pokeapi.co/api/v2/pokemon/${namePokemon.value.toLowerCase()}`);
     }
 }
 
 window.onload = function() {
     let urlInicio = "https://pokeapi.co/api/v2/pokemon/1";
+    carga.classList.add('open');
     dataPokemon(urlInicio);
 };

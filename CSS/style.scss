@@ -229,33 +229,22 @@ body{
         padding: 16px 8px;
         width: 96%;
         min-width: 0;
-        
-        // height: max-content;
-        // max-height: none;
-        // min-height: none;
-        //margin-top: 20px;
     }
 }
 
 @media screen and(max-width:440px){
-    
     .data{
-   
         label{
             font-size: 12px;
             text-align: center;
             padding: 4px;  
-           
         }
-       
     }
     .line{
-        
         width: 30px;
         height: 30px;
         border-right: 6px solid #eee;
         border-top: 6px solid #eee;
-       
     }
 }
 
@@ -267,5 +256,4 @@ body{
     .container{
         max-height: none;
     }
-    
 }
