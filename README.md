@@ -1,6 +1,6 @@
 # PokemonApi
 
-Busqueda de Pokemon por API
+Busqueda de Pokémon por API
 
 <a href="https://luca3212.github.io/PokemonApi/" target="_blank" >DEMO</a>
 
