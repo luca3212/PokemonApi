@@ -11,73 +11,73 @@
 </head>
 <body>
     <div class="conteGral">
-    <main class="container">
-        <div class="form">
-            <input class="boxText" type="text" placeholder="Buscar Pokemon..." id="entrada">
-            <button class="btonForm" type="button" id="buscar" onclick="validation()">Buscar</button>
-        </div>
-       
-        <div id="cardPokemon" class="card">
-            <div class="imgName">
-                <img id="imgPokemon" src="" alt="">
-                <h2 id="titlePokemon"></h2>
+        <main class="container">
+            <div class="form">
+                <input class="boxText" type="text" placeholder="Buscar Pokemon..." id="entrada">
+                <button class="btonForm" type="button" id="buscar" onclick="validation()">Buscar</button>
+            </div>
+        
+            <div id="cardPokemon" class="card">
+                <div class="imgName">
+                    <img id="imgPokemon" src="" alt="">
+                    <h2 id="titlePokemon"></h2>
 
-                <div class="arrow left">
-                    <span class="line" id="prew"></span>
+                    <div class="arrow left">
+                        <span class="line" id="prew"></span>
+                    </div>
+
+                    <div class="arrow">
+                        <span class="line" id="next"></span>
+                    </div>
                 </div>
 
-                <div class="arrow">
-                    <span class="line" id="next"></span>
+                <span class="separador"></span>
+                
+                <div class="infoPokemon">                                                           
+                    <div class="data">
+                        <label for="">Peso</label>
+                        <p id="peso">-</p>
+                    </div>
+                    <div class="data">
+                        <label for="">Altura</label>
+                        <p id="altura">-</p>
+                    </div>
+                    <div class="data">
+                        <label for="">HP</label>
+                        <p id="hp">-</p>
+                    </div>
+                    <div class="data">
+                        <label for="">Ataque</label>
+                        <p id="ataque">-</p>
+                    </div>
+                    <div class="data">
+                        <label for="">Defensa</label>
+                        <p id="defensa">-</p>
+                    </div>
+                    <div class="data">
+                        <label for="">Ataque Esp.</label>
+                        <p id="especialAtaque">-</p>
+                    </div>
+                    <div class="data">
+                        <label for="">Defensa Esp.</label>
+                        <p id="especialDefensa">-</p>
+                    </div>
+                    <div class="data">
+                        <label for="">Velocidad</label>
+                        <p id="velocidad">-</p>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+
+
+        <div class="modal" id="loading">
+            <div class="contModal">
+                <div class="spinner">
                 </div>
             </div>
-
-            <span class="separador"></span>
-            
-            <div class="infoPokemon">                                                           
-                <div class="data">
-                    <label for="">Peso</label>
-                    <p id="peso">-</p>
-                </div>
-                <div class="data">
-                    <label for="">Altura</label>
-                    <p id="altura">-</p>
-                </div>
-                <div class="data">
-                    <label for="">HP</label>
-                    <p id="hp">-</p>
-                </div>
-                <div class="data">
-                    <label for="">Ataque</label>
-                    <p id="ataque">-</p>
-                </div>
-                <div class="data">
-                    <label for="">Defensa</label>
-                    <p id="defensa">-</p>
-                </div>
-                <div class="data">
-                    <label for="">Ataque Esp.</label>
-                    <p id="especialAtaque">-</p>
-                </div>
-                <div class="data">
-                    <label for="">Defensa Esp.</label>
-                    <p id="especialDefensa">-</p>
-                </div>
-                <div class="data">
-                    <label for="">Velocidad</label>
-                    <p id="velocidad">-</p>
-                </div>
-            </div>
-            
         </div>
-    </main>
-
-
-    <div class="modal" id="loading">
-        <div class="contModal">
-            <div class="spinner">
-            </div>
-        </div>
-    </div>
     
     </div>
 
