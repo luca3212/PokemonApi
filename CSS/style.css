@@ -341,5 +341,11 @@ body {
   .container {
     max-height: none;
   }
+  .conteGral {
+    position: relative;
+  }
+  .modal {
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
